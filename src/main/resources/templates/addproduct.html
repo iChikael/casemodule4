@@ -34,19 +34,15 @@
           <div class="form-group">
             <label for="category">Category</label>
             <select class="form-control" id="category">
-              <!-- Options for category selection -->
               <option value="1">Category 1</option>
               <option value="2">Category 2</option>
-              <!-- Add more options as needed -->
             </select>
           </div>
           <div class="form-group">
             <label for="unit">Unit</label>
             <select class="form-control" id="unit">
-              <!-- Options for unit selection -->
               <option value="1">Unit 1</option>
               <option value="2">Unit 2</option>
-              <!-- Add more options as needed -->
             </select>
           </div>
           <div class="form-group">
@@ -64,13 +60,11 @@
 </div>
 
 <script>
-  // Lắng nghe sự kiện click vào nút "Add product"
+
   document.getElementById("btnCreateProduct").addEventListener("click", function() {
-    // Hiển thị modal
     $('#createProductModal').modal('show');
   });
 
-  // Lắng nghe sự kiện click vào nút "Save" trong modal
   document.getElementById("btnSaveProduct").addEventListener("click", function() {
     // Lấy giá trị từ các input fields
     var title = document.getElementById("title").value;
@@ -140,9 +134,6 @@
             .done((data) => {
               let product = data;
 
-              // Thực hiện các hành động khác sau khi tạo thành công
-              // Ví dụ: làm mới danh sách sản phẩm, hiển thị thông báo, vv.
-
               $('#modalCreate').modal('hide');
               AppBase.SweetAlert.showSuccessAlert('New product is created successfully');
             })
@@ -152,7 +143,6 @@
   }
 
 </script>
-
 
 
 </body>
