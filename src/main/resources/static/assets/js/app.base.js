@@ -6,8 +6,12 @@ class AppBase {
     // static API_CUSTOMER = this.DOMAIN + '/api/customers';
     // static API_DEPOSIT = this.DOMAIN + '/api/deposits';
     // static API_TRANSFER = this.DOMAIN + '/api/transfers';
+    static API_SERVER = this.DOMAIN_SERVER + '/api';
 
-    static API_PRODUCT = this.DOMAIN + '/api/products';
+
+    static API_PRODUCT = this.API_SERVER + '/products';
+
+    // static API_PRODUCT = this.DOMAIN + '/api/products';
     static API_CART = this.DOMAIN + '/api/carts';
 
     static SERVER_CLOUDINARY = "https://res.cloudinary.com";

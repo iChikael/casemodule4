@@ -29,7 +29,7 @@ public class ProductAPI {
         return new ResponseEntity<>(productResDTOS, HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/add")
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     public ResponseEntity<?> create(ProductCreateReqDTO productCreateReqDTO) {
 

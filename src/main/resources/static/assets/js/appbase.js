@@ -54,6 +54,13 @@ class AppBase {
                 text: 'You are not authorized to perform this function!',
             })
         }
+        static showError500() {
+            Swal.fire({
+                icon: 'error',
+                title: 'Internal Server Error',
+                text: 'Hệ thống Server đang có vấn đề hoặc không truy cập được.',
+            })
+        }
     }
 }
 
@@ -93,5 +100,44 @@ class Deposit {
         this.id = id;
         this.fullName = fullName;
         this.transactionAmount = transactionAmount;
+    }
+}
+
+class Product {
+    constructor(id, nameProduct, price, quantity, category, unit, description, productAvatar) {
+        this.id = id;
+        this.nameProduct = nameProduct;
+        this.price = price;
+        this.quantity = quantity;
+        this.category = category;
+        this.unit = unit;
+        this.description = description;
+        this.productAvatar = productAvatar;
+    }
+}
+
+class ProductAvatar {
+    constructor(id, fileName, fileFolder, fileUrl, fileType, cloudId, ts) {
+        this.id = id;
+        this.fileName = fileName;
+        this.fileFolder = fileFolder;
+        this.fileUrl = fileUrl;
+        this.fileType = fileType;
+        this.cloudId = cloudId;
+        this.ts = ts;
+    }
+}
+
+class Category {
+    constructor(id,title) {
+        this.id = id;
+        this.title = title;
+    }
+}
+
+class Unit {
+    constructor(id,title) {
+        this.id = id;
+        this.title = title;
     }
 }
